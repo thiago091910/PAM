@@ -1,4 +1,4 @@
-*Enzo Mendes & Thiago Lima*
+Enzo Mendes & Thiago Lima
 
 npx expo install react-dom react-native-web @expo/metro-runtime
 
