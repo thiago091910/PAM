@@ -1,5 +1,5 @@
-import StackNavigator from './navigation/StackNavigator';
+import stacknavigatortackNavigator from './navigation/StackNavigator';
 
 export default function App() {
-  return <StackNavigator />;
+  return <stacknavigator />;
 }
