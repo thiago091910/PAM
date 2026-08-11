@@ -1,37 +1,28 @@
-import { View, Text, Image, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
 export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
-
-      <Image
-        source={{
-          uri: 'https://reactnative.dev/docs/assets/p_cat1.png'
-        }}
-        style={styles.imagem}
-      />
 
       <Text style={styles.titulo}>
         Bem-vindo ao nosso aplicativo!
       </Text>
 
       <Text style={styles.texto}>
-        Aqui você pode acessar todas as funções do aplicativo.
+        Esta é a tela inicial.
       </Text>
 
-      <View style={styles.botao}>
-        <Button
-          title="Começar"
-          onPress={() => {}}
-        />
-      </View>
+      <Button
+        title="Ir para Tela de Teste"
+        onPress={() => navigation.navigate('Teste')}
+      />
 
-      <View style={styles.botao}>
-        <Button
-          title="Voltar para Login"
-          onPress={() => navigation.navigate('Login')}
-        />
-      </View>
+      <View style={styles.espaco} />
+
+      <Button
+        title="Voltar para Login"
+        onPress={() => navigation.navigate('Login')}
+      />
 
     </View>
   );
@@ -43,31 +34,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 25,
-    backgroundColor: '#f2f2f2',
-  },
-
-  imagem: {
-    width: 180,
-    height: 180,
-    marginBottom: 25,
   },
 
   titulo: {
     fontSize: 28,
     fontWeight: 'bold',
-    textAlign: 'center',
     marginBottom: 15,
+    textAlign: 'center',
   },
 
   texto: {
-    fontSize: 17,
-    color: '#666',
-    textAlign: 'center',
+    fontSize: 18,
     marginBottom: 30,
   },
 
-  botao: {
-    width: '80%',
-    marginTop: 10,
+  espaco: {
+    height: 15,
   },
 });
