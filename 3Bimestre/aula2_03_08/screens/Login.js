@@ -1,4 +1,11 @@
-import { View, Text, TextInput, Button, Image, StyleSheet } from 'react-native';
+import {
+  View,
+  Text,
+  TextInput,
+  Button,
+  Image,
+  StyleSheet
+} from 'react-native';
 
 export default function Login({ navigation }) {
   return (
@@ -11,21 +18,26 @@ export default function Login({ navigation }) {
         style={styles.imagem}
       />
 
-      <Text style={styles.titulo}>Bem-vindo!</Text>
+      <Text style={styles.titulo}>
+        Bem-vindo!
+      </Text>
 
       <Text style={styles.subtitulo}>
         Entre na sua conta para continuar
       </Text>
 
-      <Text style={styles.label}>E-mail</Text>
+      <Text style={styles.label}>
+        E-mail
+      </Text>
 
       <TextInput
         style={styles.input}
         placeholder="Digite seu e-mail"
-        keyboardType="email-address"
       />
 
-      <Text style={styles.label}>Senha</Text>
+      <Text style={styles.label}>
+        Senha
+      </Text>
 
       <TextInput
         style={styles.input}
@@ -33,12 +45,10 @@ export default function Login({ navigation }) {
         secureTextEntry
       />
 
-      <View style={styles.botao}>
-        <Button
-          title="Entrar"
-          onPress={() => navigation.navigate('Home')}
-        />
-      </View>
+      <Button
+        title="Entrar"
+        onPress={() => navigation.navigate('Home')}
+      />
 
     </View>
   );
@@ -87,10 +97,5 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingHorizontal: 15,
     marginBottom: 15,
-  },
-
-  botao: {
-    width: '100%',
-    marginTop: 10,
   },
 });

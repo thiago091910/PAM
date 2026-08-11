@@ -9,22 +9,20 @@ export default function Teste({ navigation }) {
       </Text>
 
       <Text style={styles.texto}>
-        Se você está vendo essa tela, a navegação está funcionando!
+        A navegação está funcionando!
       </Text>
 
-      <View style={styles.botao}>
-        <Button
-          title="Voltar para Home"
-          onPress={() => navigation.navigate('Home')}
-        />
-      </View>
+      <Button
+        title="Voltar para Home"
+        onPress={() => navigation.navigate('Home')}
+      />
 
-      <View style={styles.botao}>
-        <Button
-          title="Voltar para Login"
-          onPress={() => navigation.navigate('Login')}
-        />
-      </View>
+      <View style={styles.espaco} />
+
+      <Button
+        title="Voltar para Login"
+        onPress={() => navigation.navigate('Login')}
+      />
 
     </View>
   );
@@ -36,7 +34,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 25,
-    backgroundColor: '#f2f2f2',
   },
 
   titulo: {
@@ -46,14 +43,11 @@ const styles = StyleSheet.create({
   },
 
   texto: {
-    fontSize: 17,
-    textAlign: 'center',
-    color: '#666',
+    fontSize: 18,
     marginBottom: 30,
   },
 
-  botao: {
-    width: '80%',
-    marginTop: 10,
+  espaco: {
+    height: 15,
   },
 });
