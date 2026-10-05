@@ -1,12 +1,34 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import StackNavigator from './navigation/StackNavigator';
+import Inicial from '../screens/Inicial';
+import CalcularMedia from '../screens/CalcularMedia';
+import ListaEstudantes from '../screens/ListaEstudantes';
 
-export default function App() {
+const Stack = createNativeStackNavigator();
+
+export default function StackNavigator() {
   return (
-    <NavigationContainer>
-      <StackNavigator />
-    </NavigationContainer>
+    <Stack.Navigator>
+      
+      <Stack.Screen
+        name="Inicial"
+        component={Inicial}
+        options={{ title: 'Média Escolar' }}
+      />
+
+      <Stack.Screen
+        name="CalcularMedia"
+        component={CalcularMedia}
+        options={{ title: 'Calcular Média' }}
+      />
+
+      <Stack.Screen
+        name="ListaEstudantes"
+        component={ListaEstudantes}
+        options={{ title: 'Estudantes' }}
+      />
+
+    </Stack.Navigator>
   );
 }
